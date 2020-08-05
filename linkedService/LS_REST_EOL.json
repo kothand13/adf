@@ -1,0 +1,13 @@
+{
+	"name": "LS_REST_EOL",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "RestService",
+		"typeProperties": {
+			"url": "https://difc.my.salesforce.com/services/apexrest/DubaiData?sqltype=Dubai_Data_Company",
+			"enableServerCertificateValidation": false,
+			"authenticationType": "Anonymous"
+		}
+	}
+}
