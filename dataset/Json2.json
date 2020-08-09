@@ -2,19 +2,15 @@
 	"name": "Json2",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "AzureBlobStorage1",
+			"referenceName": "linkedService1",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
 		"type": "Json",
 		"typeProperties": {
 			"location": {
-				"type": "AzureBlobStorageLocation",
-				"fileName": {
-					"value": "file",
-					"type": "Expression"
-				},
-				"container": "dwh"
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "dwh"
 			}
 		}
 	},
