@@ -5,12 +5,6 @@
 			"referenceName": "LS_REST_EOL",
 			"type": "LinkedServiceReference"
 		},
-		"parameters": {
-			"FileName": {
-				"type": "string",
-				"defaultValue": "@item().name"
-			}
-		},
 		"annotations": [],
 		"type": "RestResource",
 		"schema": []
