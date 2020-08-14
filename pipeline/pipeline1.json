@@ -78,7 +78,11 @@
 				"outputs": [
 					{
 						"referenceName": "Json2",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"sourceFolderPath": "\"blobContainer/@{formatDateTime(pipeline().parameters.windowStart,'yyyy')}/@{formatDateTime(pipeline().parameters.windowStart,'MM')}/@{formatDateTime(pipeline().parameters.windowStart,'dd')}\"",
+							"sourceFileName": "\"@concat(string(pipeline().parameters.'_',formatDateTime(dataset().WindowStartTime, 'MM-dd-yyyy_hh-mm-ss'))>,'.txt')\""
+						}
 					}
 				]
 			}
