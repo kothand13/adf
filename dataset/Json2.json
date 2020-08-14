@@ -7,10 +7,10 @@
 		},
 		"parameters": {
 			"sourceFolderPath": {
-				"type": "string"
+				"type": "Expression"
 			},
 			"sourceFileName": {
-				"type": "string"
+				"type": "Expression"
 			}
 		},
 		"annotations": [],
@@ -18,10 +18,6 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": {
-					"value": "\"blobContainer/@{formatDateTime(pipeline().parameters.windowStart,'yyyy')}/@{formatDateTime(pipeline().parameters.windowStart,'MM')}/@{formatDateTime(pipeline().parameters.windowStart,'dd')}\"",
-					"type": "Expression"
-				},
 				"folderPath": "dipc",
 				"fileSystem": "dwh"
 			}
