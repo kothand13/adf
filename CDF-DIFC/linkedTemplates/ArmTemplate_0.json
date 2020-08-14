@@ -82,18 +82,12 @@
 					"referenceName": "linkedService1",
 					"type": "LinkedServiceReference"
 				},
-				"parameters": {
-					"TargetFileName": {
-						"type": "Expression"
-					}
-				},
 				"annotations": [],
 				"type": "Json",
 				"typeProperties": {
 					"location": {
 						"type": "AzureBlobFSLocation",
-						"fileName": "@dataset.TargetFileName",
-						"folderPath": "difc",
+						"fileName": "@concat('data_',formatDateTime(utcnow(),'yyyMMdd_HHmmss'),'.json')",
 						"fileSystem": "dwh"
 					}
 				},
@@ -111,12 +105,6 @@
 				"linkedServiceName": {
 					"referenceName": "LS_REST_EOL",
 					"type": "LinkedServiceReference"
-				},
-				"parameters": {
-					"FileName": {
-						"type": "string",
-						"defaultValue": "@item().name"
-					}
 				},
 				"annotations": [],
 				"type": "RestResource",
@@ -204,18 +192,14 @@
 							{
 								"referenceName": "RestResource1",
 								"type": "DatasetReference",
-								"parameters": {
-									"FileName": "@item().name"
-								}
+								"parameters": {}
 							}
 						],
 						"outputs": [
 							{
 								"referenceName": "Json2",
 								"type": "DatasetReference",
-								"parameters": {
-									"TargetFileName": "@concat(replace(item().name,'.txt',''), '_', formatDateTime(utcnow(),'yyyy-MM-dd'), '.txt')"
-								}
+								"parameters": {}
 							}
 						]
 					}
