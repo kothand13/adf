@@ -8,8 +8,14 @@
 		"AzureBlobStorage1_connectionString": {
 			"value": ""
 		},
+		"linkedService1_accountKey": {
+			"value": ""
+		},
 		"LS_REST_EOL_properties_typeProperties_url": {
 			"value": "https://difc.my.salesforce.com/services/apexrest/DubaiData?sqltype=Dubai_Data_Company"
+		},
+		"linkedService1_properties_typeProperties_url": {
+			"value": "https://storagedipcs.dfs.core.windows.net"
 		},
 		"containerUri": {
 			"value": ""

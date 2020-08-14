@@ -11,9 +11,17 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage1'"
 		},
+		"linkedService1_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'linkedService1'"
+		},
 		"LS_REST_EOL_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://difc.my.salesforce.com/services/apexrest/DubaiData?sqltype=Dubai_Data_Company"
+		},
+		"linkedService1_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://storagedipcs.dfs.core.windows.net"
 		},
 		"containerUri": {
 			"type": "string",
@@ -29,7 +37,7 @@
 	},
 	"resources": [
 		{
-			"name": "ArmTemplate_0",
+			"name": "CDF-DIFC_ArmTemplate_0",
 			"type": "Microsoft.Resources/deployments",
 			"apiVersion": "2018-02-01",
 			"properties": {
@@ -45,8 +53,14 @@
 					"AzureBlobStorage1_connectionString": {
 						"value": "[parameters('AzureBlobStorage1_connectionString')]"
 					},
+					"linkedService1_accountKey": {
+						"value": "[parameters('linkedService1_accountKey')]"
+					},
 					"LS_REST_EOL_properties_typeProperties_url": {
 						"value": "[parameters('LS_REST_EOL_properties_typeProperties_url')]"
+					},
+					"linkedService1_properties_typeProperties_url": {
+						"value": "[parameters('linkedService1_properties_typeProperties_url')]"
 					}
 				}
 			},
