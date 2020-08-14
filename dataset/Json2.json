@@ -6,7 +6,7 @@
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
-			"sourceFileName": {
+			"TargetFileName": {
 				"type": "Expression"
 			}
 		},
