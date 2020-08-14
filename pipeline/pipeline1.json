@@ -81,7 +81,7 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"sourceFolderPath": "\"blobContainer/@{formatDateTime(pipeline().parameters.scheduledRunTime,'yyyy')}/@{formatDateTime(pipeline().parameters.scheduledRunTime,'MM')}/@{formatDateTime(pipeline().parameters.scheduledRunTime,'dd')}\"",
-							"sourceFileName": "\"@concat(string(pipeline().parameters.'_',formatDateTime(dataset().scheduledRunTime, 'MM-dd-yyyy_hh-mm-ss'))>,'.txt')\""
+							"sourceFileName": "\"@concat(string(pipeline().parameters.'_',formatDateTime(pipeline().parameters.scheduledRunTime, 'MM-dd-yyyy_hh-mm-ss'))>,'.txt')\""
 						}
 					}
 				]
