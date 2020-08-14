@@ -11,7 +11,7 @@
 			"location": {
 				"type": "AzureBlobFSLocation",
 				"fileName": {
-					"value": "\"@concat(dipc.'_',formatDateTime(pipeline().parameters..WindowStartTime, 'DDMMyyyy'))>,'.json')\"",
+					"value": "@concat('dipc._',formatDateTime(pipeline().parameters..WindowStartTime, 'DDMMyyyy'))>,'.json')",
 					"type": "Expression"
 				},
 				"folderPath": "dipc",
