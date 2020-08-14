@@ -10,6 +10,11 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "dipc_@formatDateTime('ddmmyyyy')",
+					"type": "Expression"
+				},
+				"folderPath": "dipc",
 				"fileSystem": "dwh"
 			}
 		}
