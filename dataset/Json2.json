@@ -16,6 +16,7 @@
 			"location": {
 				"type": "AzureBlobFSLocation",
 				"fileName": "@dataset.TargetFileName",
+				"folderPath": "difc",
 				"fileSystem": "dwh"
 			}
 		}
