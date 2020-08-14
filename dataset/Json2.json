@@ -6,9 +6,6 @@
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
-			"sourceFolderPath": {
-				"type": "Expression"
-			},
 			"sourceFileName": {
 				"type": "Expression"
 			}
@@ -18,8 +15,14 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "@dataset().sourceFileName",
-				"fileSystem": "@dataset().sourceFolderPath"
+				"fileName": {
+					"value": "@dataset().sourceFileName",
+					"type": "Expression"
+				},
+				"fileSystem": {
+					"value": "@dataset().sourceFolderPath",
+					"type": "Expression"
+				}
 			}
 		}
 	},
