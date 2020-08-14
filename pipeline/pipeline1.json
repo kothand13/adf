@@ -72,7 +72,10 @@
 				"inputs": [
 					{
 						"referenceName": "RestResource1",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"FileName": "@item().name"
+						}
 					}
 				],
 				"outputs": [
