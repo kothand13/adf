@@ -83,8 +83,7 @@
 						"referenceName": "Json2",
 						"type": "DatasetReference",
 						"parameters": {
-							"sourceFolderPath": "\"blobContainer/@{formatDateTime(trigger().outputs.windowStartTime,'yyyy')}/@{formatDateTime(trigger().outputs.windowStartTime,'MM')}/@{formatDateTime(trigger().outputs.windowStartTime,'dd')}\"",
-							"sourceFileName": "\"@concat(string(pipeline().parameters.'_',formatDateTime(trigger().outputs.windowStartTime, 'MM-dd-yyyy_hh-mm-ss'))>,'.txt')\""
+							"TargetFileName": "@concat(replace(item().name,'.txt',''), '_', formatDateTime(utcnow(),'yyyy-MM-dd'), '.txt')"
 						}
 					}
 				]
