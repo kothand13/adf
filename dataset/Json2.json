@@ -15,14 +15,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": {
-					"value": "@dataset().sourceFileName",
-					"type": "Expression"
-				},
-				"fileSystem": {
-					"value": "@dataset().sourceFolderPath",
-					"type": "Expression"
-				}
+				"fileName": "@dataset.TargetFileName",
+				"fileSystem": "dwh"
 			}
 		}
 	},
