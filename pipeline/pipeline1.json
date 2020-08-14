@@ -80,7 +80,7 @@
 						"referenceName": "Json2",
 						"type": "DatasetReference",
 						"parameters": {
-							"sourceFolderPath": "\"blobContainer/@{formatDateTime(pipeline().parameters.windowStart,'yyyy')}/@{formatDateTime(pipeline().parameters.windowStart,'MM')}/@{formatDateTime(pipeline().parameters.windowStart,'dd')}\"",
+							"sourceFolderPath": "\"blobContainer/@{formatDateTime(pipeline().parameters.scheduledRunTime,'yyyy')}/@{formatDateTime(pipeline().parameters.scheduledRunTime,'MM')}/@{formatDateTime(pipeline().parameters.scheduledRunTime,'dd')}\"",
 							"sourceFileName": "\"@concat(string(pipeline().parameters.'_',formatDateTime(dataset().WindowStartTime, 'MM-dd-yyyy_hh-mm-ss'))>,'.txt')\""
 						}
 					}
