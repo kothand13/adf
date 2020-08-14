@@ -18,8 +18,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"folderPath": "dipc",
-				"fileSystem": "dwh"
+				"fileName": "@dataset().sourceFileName",
+				"fileSystem": "@dataset().sourceFolderPath"
 			}
 		}
 	},
