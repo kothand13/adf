@@ -72,19 +72,13 @@
 				"inputs": [
 					{
 						"referenceName": "RestResource1",
-						"type": "DatasetReference",
-						"parameters": {
-							"FileName": "@item().name"
-						}
+						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
 						"referenceName": "Json2",
-						"type": "DatasetReference",
-						"parameters": {
-							"TargetFileName": "@concat(replace(item().name,'.txt',''), '_', formatDateTime(utcnow(),'yyyy-MM-dd'), '.txt')"
-						}
+						"type": "DatasetReference"
 					}
 				]
 			}
