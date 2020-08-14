@@ -11,7 +11,6 @@
 			"location": {
 				"type": "AzureBlobFSLocation",
 				"fileName": "@concat('data_',formatDateTime(utcnow(),'yyyMMdd_HHmmss'),'.json')",
-				"folderPath": "difc",
 				"fileSystem": "dwh"
 			}
 		}
